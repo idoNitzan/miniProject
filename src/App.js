@@ -9,6 +9,7 @@ import shortid from 'shortid'
 
 class App extends React.Component {
   componentWillMount() {
+    // Set session ID cookie on first mount (if not set)
     if (!Cookies.get('sessionId')) {
       Cookies.set('sessionId', shortid.generate())
     }

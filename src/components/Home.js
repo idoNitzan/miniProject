@@ -7,11 +7,13 @@ class Home extends React.Component {
   state = {userName: ''}
 
   async componentWillMount() {
+    // I user is not logged in redirect to sign up page
     if (!isLoggedIn()) {
       this.props.history.push('/sign_up')
       return
     }
     try {
+      // If logged in request for the user name
       const response = await api('/my_user_name')
       this.setState({userName: response.userName})
     } catch (err) {
