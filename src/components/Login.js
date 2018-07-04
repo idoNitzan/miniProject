@@ -23,7 +23,7 @@ class Login extends React.Component {
         this.setState({error: 'Incorrect password'})
         break
       case 'limit_exceeded':
-          this.setState({error: 'Too many login failures in one minute - you are blocked for 120 seconds'})
+          this.setState({error: 'Too many login failures - you are blocked for 30 seconds'})
           break
       case 'network':
         this.setState({error: 'Server is not running'})
