@@ -6,7 +6,8 @@ import {withRouter} from 'react-router-dom'
 class NavBar extends React.Component {
   render() {
     return (
-      <Flex style={styles.container}>
+      <Flex style={styles.outerContainer}>
+      <Flex style={styles.innerContainer}>
         {isLoggedIn() && <div style={styles.button} onClick={logOut}>Log Out</div>}
         {!isLoggedIn() && (
           <div
@@ -25,23 +26,31 @@ class NavBar extends React.Component {
           </div>
         )}
       </Flex>
+      </Flex>
     )
   }
 }
 
 const styles = {
-  container: {
+  outerContainer: {
     width: '100%',
     height: 50,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     backgroundColor: '#660066',
     color: '#50dd66',
     fontSize: 18,
     alignItems: 'center',
-    display: 'flex'
+    display: 'flex',
+  },
+  innerContainer: {
+    width: 900,
+    height: '100%',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    display: 'flex',
   },
   button: {
-    marginRight: 30,
+    marginRight: 50,
     cursor: 'pointer'
   }
 }

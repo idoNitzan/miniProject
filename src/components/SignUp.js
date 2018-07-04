@@ -89,8 +89,8 @@ class SignUp extends React.Component {
   render() {
     return (
       <div style={{margin: '0 auto', width: 300}}>
-        <div style={{textAlign: 'center', fontSize: 22, marginBottom: 25, marginTop: 15}}>
-          Sign Up
+        <div style={{textAlign: 'center', fontSize: 22, marginBottom: 25, marginTop: 30}}>
+          Sign Up Now
         </div>
         Name
         <div>
@@ -138,7 +138,7 @@ const styles = {
   button: {
     width: 318,
     height: 40,
-    backgroundColor: '#b0b3cc',
+    backgroundColor: '#50dd66',
     fontSize: 18,
     marginTop: 10,
     cursor: 'pointer'

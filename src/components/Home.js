@@ -8,7 +8,8 @@ class Home extends React.Component {
 
   async componentWillMount() {
     if (!isLoggedIn()) {
-      this.props.history.push('/login')
+      this.props.history.push('/sign_up')
+      return
     }
     try {
       const response = await api('/my_user_name')

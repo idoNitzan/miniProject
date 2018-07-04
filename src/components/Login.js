@@ -23,7 +23,7 @@ class Login extends React.Component {
         this.setState({error: 'Incorrect password'})
         break
       case 'limit_exceeded':
-          this.setState({error: 'Too many login failures - try again in two minutes'})
+          this.setState({error: 'Too many login failures in one minute - you are blocked for 120 seconds'})
           break
       case 'network':
         this.setState({error: 'Server is not running'})
@@ -48,8 +48,8 @@ class Login extends React.Component {
   render() {
     return (
       <div style={{margin: '0 auto', width: 300}}>
-        <div style={{textAlign: 'center', fontSize: 22, marginBottom: 25, marginTop: 15}}>
-          Login
+        <div style={{textAlign: 'center', fontSize: 22, marginBottom: 25, marginTop: 30}}>
+          Login Now
         </div>
         Email
         <div>
@@ -89,7 +89,7 @@ const styles = {
   button: {
     width: 318,
     height: 40,
-    backgroundColor: '#b0b3cc',
+    backgroundColor: '#50dd66',
     fontSize: 18,
     marginTop: 10,
     cursor: 'pointer'
